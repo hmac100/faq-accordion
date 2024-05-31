@@ -1,0 +1,110 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -10px;
+  background-image: url("./assets/images/background-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: hsl(275, 100%, 97%);
+}
+
+.accordion-container {
+  width: 42%;
+  box-shadow: hsla(240, 24%, 62%, 0.3) 0px 15px 25px -5px,
+    hsla(241, 81%, 54%, 0.04) 0px 10px 10px -5px;
+
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1rem;
+  padding: 2.5rem;
+}
+
+.accord-title {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+h1 {
+  font-size: 54px;
+  color: hsl(292, 42%, 14%);
+}
+
+h2 {
+  font-size: 1.1rem;
+  font-family: 600;
+  color: hsl(292, 42%, 14%);
+}
+
+h2:hover {
+  color: hsl(281, 83%, 54%);
+}
+
+.accordion.active h2 {
+  color: hsl(281, 83%, 54%);
+}
+
+.accord-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  transition: 0.3secs;
+}
+.accordion {
+  font-weight: 600;
+  color: hsl(292, 42%, 14%);
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  border-bottom: 0.8px solid hsla(292, 16%, 49%, 0.2);
+}
+
+.accordion:nth-last-child(1) {
+  margin-bottom: -25px;
+  border-bottom: none;
+  padding-bottom: 0px;
+}
+.accord-body {
+  display: none;
+}
+.accordion.active .accord-body {
+  display: block;
+  margin-bottom: 1.8rem;
+}
+
+p {
+  color: hsl(292, 16%, 49%);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5rem;
+}
+
+@media only screen and (max-width: 375px) {
+  .accordion-container {
+    min-width: 88%;
+    padding: 1.3rem;
+  }
+
+  h1 {
+    font-size: 38px;
+  }
+  .accord-title img {
+    height: 2rem;
+    margin-top: 0.4rem;
+  }
+  p {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
